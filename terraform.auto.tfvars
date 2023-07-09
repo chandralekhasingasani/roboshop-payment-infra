@@ -1,4 +1,4 @@
-COMPONENT = "catalogue"
+COMPONENT = "payment"
 PROJECT_NAME = "roboshop"
 PORT           = 8080
 IAM_INSTANCE_PROFILE = true
