@@ -16,9 +16,12 @@ module "rabbitmq" {
   SUBNET_IDS = module.vpc.SUBNET_IDS
   VPC_ID = module.vpc.VPC_ID
   CIDR_BLOCK = module.vpc.VPC_CIDR
-  AZ = var.AZ
+  INSTANCE_TYPE          = var.INSTANCE_TYPE
+  SPOT_INSTANCE_COUNT    = var.SPOT_INSTANCE_COUNT
+  INSTANCE_COUNT         = var.INSTANCE_COUNT
   WORKSTATION_IP  = var.WORKSTATION_IP
   PRIVATE_HOSTED_ZONE_ID = module.vpc.PRIVATE_HOSTED_ZONE_ID
+  PORT                   = 5672
 }
 
 module "app"{
