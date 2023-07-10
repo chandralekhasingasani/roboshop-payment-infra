@@ -41,6 +41,7 @@ module "app"{
   IS_ALB_INTERNAL        = var.IS_ALB_INTERNAL
   CIDR_BLOCK_ELB_ACCESS  = [var.FRONT_END_CIDR, module.vpc.VPC_CIDR,"${module.vpc.NAT_GW_IP}/32"]
   PRIVATE_HOSTED_ZONE_ID = module.vpc.PRIVATE_HOSTED_ZONE_ID
+  PROMETHEUS_IP          = var.PROMETHEUS_IP
 }
 
 
